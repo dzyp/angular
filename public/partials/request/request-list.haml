@@ -1,0 +1,9 @@
+%div.span10(ng-hide="requests.length")
+  %p There are no results to show
+  %a{:href => "#"}
+%div.span10(ng-show="requests.length")
+  %table.table.table-striped
+    %tr(ng-repeat="request in requests")
+      %td {{request.title}}
+      
+%a{:href => "#/request-form/0"} Create

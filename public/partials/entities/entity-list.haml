@@ -1,0 +1,12 @@
+%div.span10(ng-hide="entities.length")
+  %p There are no results to show
+  %a{:href => "#"}
+%div.span10(ng-show="entities.length")
+  %table.table.table-striped
+    %tr
+      %th Name
+      %th Locks
+    %tr(ng-repeat="entity in entities")
+      %td {{entity.name}}
+      %td
+        %a{:href => "#/lock-list/{{entity.document_id}}"} Locks

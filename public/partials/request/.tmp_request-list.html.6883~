@@ -1,0 +1,11 @@
+<div class='span10' ng-hide='results()'>
+  <p>There are no results to show</p>
+  <a href='#'></a>
+</div>
+<div class='span10' ng-show='results()'>
+  <table class='table table-striped'>
+    <tr ng-repeat='request in requests'>
+      <td>{{request.title}}</td>
+    </tr>
+  </table>
+</div>

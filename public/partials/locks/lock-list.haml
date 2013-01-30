@@ -1,0 +1,9 @@
+%div.span10(ng-hide="locks.length")
+  %p There are no results to show
+  %a{:href => "#"}
+%div.span10(ng-show="locks.length")
+  %table.table.table-striped
+    %tr
+      %th Locked By
+    %tr(ng-repeat="lock in locks")
+      %td {{lock.locked_by}}

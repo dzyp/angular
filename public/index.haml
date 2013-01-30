@@ -1,0 +1,66 @@
+!!! 5
+%html(ng-app="MyApp")
+  %head
+    %title My Sinatra App
+    %link{:href => "/css/site.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "/css/bootstrap.min.css", :rel => "stylesheet"}
+
+  %body
+    %div.container
+      %ul.nav.nav-pills(ng-controller="NavCtrl")
+        %li(ng-hide="authenticated()")
+          %a{:href => "#/login"} Login
+        %li(ng-hide="authenticated()")
+          %a{:href => "#/register"} Register
+        %li(ng-show="authenticated()")
+          %a{:href => "#/me"} My Info
+        %li(ng-show="authenticated()")
+          %a(ng-click="logout()") Logout
+      %div.hero-unit
+        %h1 Welcome to my test app   
+        
+        
+      %div.row.main
+        %div.span2#left-column
+          %ul.nav.nav-tabs.nav-stacked(ng-controller="NavCtrl")
+            %li
+              %a{:href => "#/home"} Home
+            %li(ng-show="authenticated()")
+              %a{:href => "#/private"} Private Home
+            %li(ng-show="authenticated()")
+              %a{:href => "#/request-list"} Requests
+            %li(ng-show="authenticated()")
+              %a{:href => "#/entity-list"} Entities
+        %div.span10#right-column
+          %div(ng-view)
+          
+      %div.row#footer
+        %div.span12
+          %div.hero-unit
+            %h2 this is the footer
+        
+    %script{:type => "text/javascript",
+            :src  => "http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"}
+    %script{:type => "text/javascript",
+            :src  => "http://code.angularjs.org/1.1.1/angular-resource.js"}
+    %script{:type => "text/javascript",
+            :src  => "http://code.angularjs.org/1.1.1/angular-cookies.js"}
+    %script{:type => "text/javascript",
+            :src  => "http://code.angularjs.org/1.1.1/angular-loader.js"}
+    %script{:type => "text/javascript",
+            :src  => "http://code.angularjs.org/1.1.1/angular-sanitize.js"}
+    %script{:type => "text/javascript",
+            :src  => "/javascript/rx/rx.min.js"}
+    %script{:type => "text/javascript",
+            :src  => "/javascript/rx/rx.experimental.min.js"}
+    %script{:type => "text/javascript",
+            :src  => "/javascript/lockAPI.js"}
+    %script{:type => "text/javascript",
+            :src  => "/javascript/services.js"}
+    %script{:type => "text/javascript",
+            :src  => "/javascript/controllers.js"}
+    %script{:type => "text/javascript",
+            :src  => "/javascript/bootstrap.min.js"}
+    %script{:type => "text/javascript",
+            :src  => "/javascript/app.js"}
+    

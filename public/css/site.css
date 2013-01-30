@@ -1,0 +1,11 @@
+.main {
+	height:100%;
+}
+
+#left-column {
+	min-height:600px;
+}
+
+#right-column {
+	min-height:600px;
+}

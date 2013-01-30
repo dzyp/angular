@@ -1,0 +1,14 @@
+<div class='span10'>
+  <span ng-bind='request.errors' ng-show='hasErrors()'></span>
+  <form class='form-horizontal' name='requestForm' ng-submit='save(request)'>
+    <div class='control-group'>
+      <label class='control-label' for='inputTitle'>Title</label>
+      <div class='controls'>
+        <input id='inputTitle' ng-model='request.title' placeholder='Title' required='required' type='text' />
+      </div>
+    </div>
+    <div class='control-group'>
+      <button class='btn' type='submit'>Save</button>
+    </div>
+  </form>
+</div>

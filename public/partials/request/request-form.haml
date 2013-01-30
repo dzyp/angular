@@ -1,0 +1,10 @@
+%div.span10
+  %span(ng-show="hasErrors()" ng-bind="request.errors")
+  %form.form-horizontal(ng-submit="save(request)"){:name => "requestForm"}
+    %div.control-group
+      %label.control-label{:for => "inputTitle"} Title
+      %div.controls
+        %input#inputTitle{:type => "text", :placeholder => "Title"}(ng-model="request.title" required)
+    %div.control-group
+      %button.btn{:type => "submit"} Save
+		
